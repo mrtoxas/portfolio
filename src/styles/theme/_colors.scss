@@ -1,0 +1,37 @@
+$themes: (
+  ":root": (
+    accent: #f4f4f5,
+    accent-foreground: #18181b,
+    background: #ffffff,
+    foreground: #09090b,
+    primary: #18181b,
+    primary-foreground: #ffffff,
+    secondary: #f4f4f5,  
+    secondary-foreground: #18181b,
+    border: #e4e4e7,
+  ),
+  ".dark": (
+    accent: #27272a,
+    accent-foreground: #fafafa,
+    background: #09090b,
+    foreground: #ffffff,
+    primary: #ffffff,
+    primary-foreground: #09090b,
+    secondary: #27272a,
+    secondary-foreground: #ffffff,
+    border: #27272a,
+  )
+);
+
+@each $selector, $theme in $themes {
+  #{$selector} {
+    @each $name, $color in $theme {
+      --color-#{$name}: #{$color};
+    }
+  }
+}
+
+@function color($color-name) {
+  @return var(--color-#{$color-name});
+}
+

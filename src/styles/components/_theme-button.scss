@@ -1,0 +1,36 @@
+.theme-button {
+	border:none;
+	border-radius: theme(border-radius);
+	background-color: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: .2em;
+	cursor: pointer;
+	&:hover {
+		background-color: color(accent)
+	}
+}
+
+.theme-button svg {
+	display: block;
+	stroke: color(accent-foreground);
+}
+
+.dark .theme-button {
+	.theme-dark-icon {
+		display: none;
+	}
+	.theme-light-icon {
+		display: inline-block;
+	}
+}
+
+.light .theme-button {
+	.theme-dark-icon {
+		display: inline-block;
+	}
+	.theme-light-icon {
+		display: none;
+	}
+}

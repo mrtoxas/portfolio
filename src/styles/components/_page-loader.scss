@@ -1,0 +1,22 @@
+.page-loader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: color(background);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.page-loader svg {
+	stroke: color(foreground);
+	animation: rotate 1s infinite linear;
+}
+
+@keyframes rotate {
+	to {
+		transform: rotate(360deg);
+	}
+}
