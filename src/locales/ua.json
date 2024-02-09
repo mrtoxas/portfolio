@@ -1,12 +1,12 @@
 {
   "menu": {
-    "home": "Головна",
-    "about": "Про мене",
-    "portfolio": "Портфоліо",
-    "contact": "Контакти"
+    "aboutMe": "Про мене",
+    "myWorks": "Роботи",
+    "contacts": "Контакти"
   },
-  "paragraphs": {
-    "welcome": "Ласкаво просимо до мого портфоліо!",
-    "aboutMe": "Про мене"
+  "heading": {
+    "skills": "Навички",
+    "works": "Роботи",
+    "education": "Освіта"
   }
 }

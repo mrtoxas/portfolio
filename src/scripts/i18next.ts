@@ -6,6 +6,7 @@ import ruTranslation from 'locales/ru.json';
 import uaTranslation from 'locales/ua.json';
 
 export const locales = () => {
+  const langSelect = document.getElementById('langSelect');
   const changeLanguage = (locale?: string) => {
     i18next.changeLanguage(locale, function (err, t) {
       if (err) return console.log('Ошибка загрузки переводов:', err);
@@ -30,20 +31,14 @@ export const locales = () => {
           ua: {
             translation: uaTranslation,
           },
-        },        
+        },
       })
       .then((t) => changeLanguage());
 
-    document.getElementById('btn-ua').addEventListener('click', function () {
-      changeLanguage('ua');
-    });
-
-    document.getElementById('btn-en').addEventListener('click', function () {
-      changeLanguage('en');
-    });
-
-    document.getElementById('btn-ru').addEventListener('click', function () {
-      changeLanguage('ru');
+    langSelect.addEventListener('change', (event: Event) => {
+      const selectElement = event.target as HTMLSelectElement;
+      console.log(selectElement.value)
+      changeLanguage(selectElement.value);
     });
   };
 

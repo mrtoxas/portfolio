@@ -10,8 +10,4 @@ document.addEventListener('DOMContentLoaded', function appInitialize() {
   pageLoader();
 
   console.log(t('menu.home'));
-
-  
 });
-
-

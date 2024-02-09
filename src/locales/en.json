@@ -1,12 +1,12 @@
 {
   "menu": {
-    "home": "Home",
-    "about": "About",
-    "portfolio": "Portfolio",
-    "contact": "Contact"
+    "aboutMe": "About me",
+    "myWorks": "Works",
+    "contacts": "Contacts"
   },
-  "paragraphs": {
-    "welcome": "Welcome to my portfolio!",
-    "aboutMe": "About Me"
+  "heading": {
+    "skills": "Skills",
+    "works": "Works",
+    "education": "Education"
   }
 }

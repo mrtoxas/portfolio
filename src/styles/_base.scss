@@ -3,18 +3,18 @@ html {
 	line-height: 1.5;
 }
 
-body{
-  color: color(foreground);
-  background-color: color(background);
+body {
+	color: color(foreground);
+	background-color: color(background);
 }
 
-.icon{
+.icon {
 	display: inline-flex;
 	width: 1.5rem;
 	height: 1.5rem;
 }
 
-.clear-list{
+.clear-list {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
