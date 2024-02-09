@@ -5,16 +5,33 @@
   "scripts": {
     "clear": "rimraf ./dist",
     "dev": "parcel src/index.html",
-    "build": "rimraf ./dist && parcel build src/index.html --no-source-maps"
+    "build": "rimraf ./dist && parcel build src/index.html --no-source-maps",
+    "lint": "eslint src/scripts/**/*.ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "format": "prettier --write src/**/*.ts",
+    "check-format": "prettier --check src/**/*.ts"
   },
   "keywords": [],
   "author": "mrtoxas@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.11.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.2.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "parcel": "^2.11.0",
     "parcel-reporter-static-files-copy": "^1.5.3",
     "posthtml-include": "^1.7.4",
     "rimraf": "^5.0.5"
+  },
+  "dependencies": {
+    "eslint-config-prettier": "^9.1.0",
+    "i18next": "^23.8.2",
+    "i18next-browser-languagedetector": "^7.2.0",
+    "prettier": "^3.2.5"
   }
 }
