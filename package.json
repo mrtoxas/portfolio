@@ -26,12 +26,14 @@
     "parcel": "^2.11.0",
     "parcel-reporter-static-files-copy": "^1.5.3",
     "posthtml-include": "^1.7.4",
-    "rimraf": "^5.0.5"
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.3"
   },
   "dependencies": {
     "eslint-config-prettier": "^9.1.0",
     "i18next": "^23.8.2",
     "i18next-browser-languagedetector": "^7.2.0",
+    "locales": "^0.0.2",
     "prettier": "^3.2.5"
   }
 }

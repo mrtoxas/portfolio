@@ -34,15 +34,9 @@ export const locales = () => {
         },
       })
       .then((t) => changeLanguage());
-
-    langSelect.addEventListener('change', (event: Event) => {
-      const selectElement = event.target as HTMLSelectElement;
-      console.log(selectElement.value)
-      changeLanguage(selectElement.value);
-    });
   };
 
   const t = (key: string) => i18next.t(key);
 
-  return { i18nextInit, t };
+  return { i18nextInit, t, changeLanguage };
 };

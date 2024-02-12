@@ -1,34 +1,54 @@
-.lang-select {
-  //border: 1px solid color(accent);
-  font-size: theme(text-sm);
-  &:has(select:focus) {
-    outline: -webkit-focus-ring-color auto 1px;
-  }
-  &:hover {
-    background-color: color(accent);
-  }
+.txs-select {
+  display: inline-block;
+  user-select: none;
+  position: relative;
 }
 
-.lang-select select {
-  appearance: none;
-  border: none;
-  outline: none;
-  background-color: transparent;
-  box-shadow: none;  
-  cursor: pointer;
-  color: color(foreground);
-  padding: 0.3em 0.6em;    
-  border-radius: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-  border: 0;
+.txs-select-value {
+  border: 1px solid gray;
+  padding: 2px 6px;
 }
 
-select option {
-  padding: 50px;
-  color: color(foreground);
-  background: color(background);
-  border-radius: 0;
+.txs-select:not(.is-open) .txs-select-options {
+  display: none;
 }
+
+.txs-select-options {
+  position: absolute;
+  top: 100%;
+}
+
+// .lang-select {
+//   //border: 1px solid color(accent);
+//   font-size: theme(text-sm);
+//   &:has(select:focus) {
+//     outline: -webkit-focus-ring-color auto 1px;
+//   }
+//   &:hover {
+//     background-color: color(accent);
+//   }
+// }
+
+// .lang-select select {
+//   appearance: none;
+//   border: none;
+//   outline: none;
+//   background-color: transparent;
+//   box-shadow: none;
+//   cursor: pointer;
+//   color: color(foreground);
+//   padding: 0.3em 0.6em;
+//   border-radius: 0;
+//   -webkit-border-radius: 0;
+//   -moz-border-radius: 0;
+//   -o-border-radius: 0;
+//   border-radius: 0;
+//   border: 0;
+// }
+
+// select option {
+//   padding: 50px;
+//   color: color(foreground);
+//   background: color(background);
+//   border-radius: 0;
+// }

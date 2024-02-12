@@ -1,13 +1,24 @@
 import { themeInitialize } from './theme';
 import { pageLoader } from './loader';
-import { locales } from './i18next';
+import { locales } from './locale';
+import { TxsSelect } from './txs-select';
 
-document.addEventListener('DOMContentLoaded', function appInitialize() {
-  const { i18nextInit, t } = locales();
+const appInitialize = () => {
+  const { i18nextInit, t, changeLanguage } = locales();
 
   themeInitialize();
   i18nextInit();
   pageLoader();
 
-  console.log(t('menu.home'));
-});
+  const select = new TxsSelect({
+    id: 'select',
+    value: 'ru',
+    onChange: (value: string) => {
+      changeLanguage(value);
+    },
+  });
+
+  // console.log(t('menu.home'));
+};
+
+document.addEventListener('DOMContentLoaded', appInitialize);
