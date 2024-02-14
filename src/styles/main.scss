@@ -6,8 +6,9 @@
 @import "base";
 @import "layout";
 
+@import "sections/header";
+
 @import "components/theme-button";
 @import "components/lang-select";
 @import "components/page-loader";
-@import "components/header";
 @import "components/skills";

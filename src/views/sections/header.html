@@ -1,16 +1,19 @@
 <header class="header">
-	<div class="container header-container">
-		<div>
-			Portfolio
-		</div>
-		<div class="header-actions">
-			<nav class="header-nav">
-				<a href="#" data-i18n="menu.aboutMe">About me</a>
-				<a href="#" data-i18n="menu.myWorks">Works</a>
-				<a href="#" data-i18n="menu.contacts">Contacts</a>
-			</nav>
-			<include src="src/views/components/theme-btn.html"></include>
-			<include src="src/views/components/lang-select.html"></include>
-		</div>
-	</div>
+  <div class="container header-container">
+    <div></div>
+    <nav class="header-nav">
+      <a href="#" data-i18n="menu.aboutMe">About me</a>
+      <a href="#" data-i18n="menu.myWorks">Works</a>
+      <a href="#" data-i18n="menu.contacts">Contacts</a>
+    </nav>
+
+    <div class="header-actions">
+      <div>
+        <include src="src/views/components/lang-select.html"></include>
+      </div>
+      <div>
+        <include src="src/views/components/theme-btn.html"></include>
+      </div>
+    </div>
+  </div>
 </header>

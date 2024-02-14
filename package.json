@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "clear": "rimraf ./dist",
-    "dev": "parcel src/index.html",
-    "build": "rimraf ./dist && parcel build src/index.html --no-source-maps",
+    "clear": "rimraf .parcel-cache dist",
+    "dev": "yarn clear && parcel src/index.html --no-cache",
+    "build": "rimraf dist && parcel build src/index.html --no-source-maps --public-url ./",
     "lint": "eslint src/scripts/**/*.ts",
     "lint:fix": "eslint src --ext .ts --fix",
     "format": "prettier --write src/**/*.ts",

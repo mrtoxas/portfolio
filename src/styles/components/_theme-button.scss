@@ -7,27 +7,32 @@ html:not(.dark):not(.light) {
 }
 
 .theme-button {
-	border: none;
-	border-radius: theme(border-radius);
+	border: none;	
 	background-color: transparent;
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	padding: 0.2em;
+	align-items: center;	
+	border-radius: theme(border-radius);    
 	cursor: pointer;
+	height:100%;
 	&:hover {
 		background-color: color(accent);
 	}
 }
 
+.theme-button .icon{	
+	align-items: center;
+}
+
+.theme-dark-icon{
+	margin-top:1px;
+}
+
 .theme-button svg {
 	display: block;
 	color: color(accent-foreground);
-}
-
-.theme-light-icon {
-	width: 1.4rem;
-	height: 1.4rem;
+	height: 100%;
+  width: 100%;
 }
 
 .dark .theme-button {
@@ -35,13 +40,13 @@ html:not(.dark):not(.light) {
 		display: none;
 	}
 	.theme-light-icon {
-		display: inline-block;
+		display: inline-flex;
 	}
 }
 
 .light .theme-button {
 	.theme-dark-icon {
-		display: inline-block;
+		display: inline-flex;
 	}
 	.theme-light-icon {
 		display: none;

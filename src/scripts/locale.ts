@@ -6,17 +6,6 @@ import ruTranslation from 'locales/ru.json';
 import uaTranslation from 'locales/ua.json';
 
 export const locales = () => {
-  const langSelect = document.getElementById('langSelect');
-  const changeLanguage = (locale?: string) => {
-    i18next.changeLanguage(locale, function (err, t) {
-      if (err) return console.log('Ошибка загрузки переводов:', err);
-      document.querySelectorAll('[data-i18n]').forEach(function (element) {
-        var key = element.getAttribute('data-i18n');
-        element.textContent = i18next.t(key);
-      });
-    });
-  };
-
   const i18nextInit = () => {
     i18next
       .use(LanguageDetector)
@@ -33,10 +22,33 @@ export const locales = () => {
           },
         },
       })
-      .then((t) => changeLanguage());
+      .then(() => changeLanguage());
+  };
+
+  const changeLanguage = (locale?: string) => {
+    i18next.changeLanguage(locale, (err) => {
+      if (err) return console.error('Error loading translations:', err);
+
+      document.querySelectorAll('[data-i18n]').forEach((element) => {
+        element.textContent = i18next.t(element.getAttribute('data-i18n'));
+      });
+    });
+  };
+
+  const toggleLanguage = () => {
+    if (i18next.language) {
+      const langs = ['en_US', 'ua_UA', 'ru_RU'];
+      const nextLangIndex = (langs.findIndex((item) => item === i18next.language) + 1) % langs.length;
+      const newLang = langs[nextLangIndex];
+      changeLanguage(newLang);
+      
+      return newLang;
+    }
+
+    
   };
 
   const t = (key: string) => i18next.t(key);
 
-  return { i18nextInit, t, changeLanguage };
+  return { i18nextInit, t, changeLanguage, toggleLanguage };
 };

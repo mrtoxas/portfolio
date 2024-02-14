@@ -1,1 +1,0 @@
-export { TxsSelect  } from './select';

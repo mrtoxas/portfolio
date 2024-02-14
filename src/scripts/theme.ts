@@ -7,21 +7,19 @@ const themeButtonId = 'themeBtn';
 const storageThemeKey = 'theme';
 
 const setThemeForPage = (theme: Theme) => {
-  document.documentElement.classList.remove(
-    theme === Theme.DARK ? Theme.LIGHT : Theme.DARK,
-  );
+  document.documentElement.classList.remove(theme === Theme.DARK ? Theme.LIGHT : Theme.DARK);
   document.documentElement.classList.add(theme);
 };
 
 const getSystemTheme = () => {
-  return window.matchMedia &&
-    window.matchMedia('(prefers-color-scheme: dark)').matches
+  return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
     ? Theme.DARK
     : Theme.LIGHT;
 };
 
 const toggleTheme = () => {
   const storageTheme = localStorage.getItem(storageThemeKey);
+
   const theme = storageTheme
     ? storageTheme === Theme.DARK
       ? Theme.LIGHT
@@ -43,10 +41,11 @@ export const themeInitialize = () => {
   themeButtonInit();
 
   const storageTheme = localStorage.getItem(storageThemeKey);
+
   const pageTheme =
     document.documentElement.className
       .split(' ')
-      .find((item) => item === 'dark' || item === 'light') || null;
+      .find((item: string) => item === Theme.DARK || item === Theme.LIGHT) || null;
 
   if (storageTheme && !pageTheme) {
     setThemeForPage(storageTheme as Theme);

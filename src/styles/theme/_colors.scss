@@ -6,9 +6,9 @@ $themes: (
     foreground: #09090b,
     primary: #18181b,
     primary-foreground: #ffffff,
-    secondary: #f4f4f5,  
+    secondary: #f4f4f5,
     secondary-foreground: #18181b,
-    border: #e4e4e7,
+    border: #e4e4e7
   ),
   ".dark": (
     accent: #27272a,
@@ -19,7 +19,7 @@ $themes: (
     primary-foreground: #09090b,
     secondary: #27272a,
     secondary-foreground: #ffffff,
-    border: #27272a,
+    border: #27272a
   )
 );
 
@@ -35,3 +35,9 @@ $themes: (
   @return var(--color-#{$color-name});
 }
 
+@media print {
+  body {
+    --color-background: fff;
+    --color-foreground: #000;
+  }
+}
