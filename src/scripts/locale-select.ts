@@ -5,33 +5,33 @@ enum ClassNames {
   OPTION = 'txs-select-option',
 }
 
-interface TxsSelectProps {
+interface LocaleSelectProps {
   id: string;
   value?: string;
   onChange: (value: string) => void;
   onKeyDown: () => string;
 }
 
-export function TxsSelect({ id, onChange, onKeyDown, value }: TxsSelectProps) {
+export function LocaleSelect({ id, onChange, onKeyDown, value }: LocaleSelectProps) {
   let isOpen = false;
 
   const element = document.getElementById(id);
   if (!element) {
-    console.error(`TxsSelect: Element with id ${id} not found`);
+    console.error(`LocaleSelect: Element with id ${id} not found`);
     return;
   }
 
   const valueElement = element.querySelector(`.${ClassNames.VALUE}`) as HTMLElement;
 
   if (!valueElement) {
-    console.error(`TxsSelect: Element with class ${ClassNames.VALUE} not found`);
+    console.error(`LocaleSelect: Element with class ${ClassNames.VALUE} not found`);
     return;
   }
 
   const setValue = (val: string) => {
     const option = element.querySelector(`[data-value=${val}]`) as HTMLElement;
     if (!option) {
-      console.error(`TxsSelect: Option element with value ${val} not found`);
+      console.error(`LocaleSelect: Option element with value ${val} not found`);
       return;
     }
 

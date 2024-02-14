@@ -1,7 +1,7 @@
 import { themeInitialize } from './theme';
 import { pageLoader } from './loader';
 import { locales } from './locale';
-import { TxsSelect } from './locale-select';
+import { LocaleSelect } from './locale-select';
 import i18next from 'i18next';
 
 const appInitialize = () => {
@@ -11,7 +11,7 @@ const appInitialize = () => {
   i18nextInit();
   pageLoader();
 
-  new TxsSelect({
+  new LocaleSelect({
     id: 'select',
     value: i18next.language,
     onChange: (value: string) => changeLanguage(value),
