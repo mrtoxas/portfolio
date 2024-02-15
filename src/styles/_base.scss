@@ -1,6 +1,7 @@
 html {
 	font-size: 100%;
 	line-height: 1.5;
+	font-family: "Inter", sans-serif;
 }
 
 body {
@@ -22,4 +23,10 @@ body {
 
 meta[name="theme-color"] {
   content: var(--color-background);
+}
+
+
+.logo-title{
+	font-size: 2rem;
+	font-weight: 800;
 }

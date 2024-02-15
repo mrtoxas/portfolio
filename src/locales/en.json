@@ -1,4 +1,9 @@
 {
+  "global": {
+    "firstNameLastName": "Anton Bojko",
+    "webDeveloper": "Web developer",
+    "greetings": "Hello I'm"
+  },
   "menu": {
     "aboutMe": "About me",
     "myWorks": "Works",
@@ -7,7 +12,8 @@
   "heading": {
     "skills": "Skills",
     "works": "Works",
-    "education": "Education"
+    "education": "Education",
+    "socialActivity": "Social activity"
   },
   "education": {
     "CSTU": "Cherkassy State Technological University",
@@ -15,5 +21,9 @@
     "master": "Master's degree in Computer systems and networks",
     "bachelor": "Bachelor Computer systems and networks",
     "junior": "Junior specialist computer engineering Maintenance of computer and intellectual systems and networks"
+  },
+  "socialActivity": {
+    "forum": "Since 2023, I have been actively involved in communicating and sharing my experience with other web developers on one of the most popular online forums for programmers. I regularly solved various web development tasks related to html, css, javascript and other technologies, as well as advised and supported both beginners and experienced colleagues in the profession. I also served as a moderator on this forum, making sure that the rules, order and quality of discussions were maintained",
+    "profileLink": "Profile link"
   }
 }
