@@ -29,7 +29,7 @@ export function LocaleSelect({ id, onChange, onKeyDown, value }: LocaleSelectPro
   }
 
   const setValue = (val: string) => {
-    const option = element.querySelector(`[data-value=${val}]`) as HTMLElement;
+    const option = element.querySelector(`[data-value=${val}]`) as HTMLElement;    
     if (!option) {
       console.error(`LocaleSelect: Option element with value ${val} not found`);
       return;
@@ -73,7 +73,7 @@ export function LocaleSelect({ id, onChange, onKeyDown, value }: LocaleSelectPro
       setValue(value);
     }
   };
-
+  
   setValue(value);
 
   window.addEventListener('click', clickHandler);

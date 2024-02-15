@@ -37,7 +37,7 @@ export const locales = () => {
 
   const toggleLanguage = () => {
     if (i18next.language) {
-      const langs = ['en_US', 'ua_UA', 'ru_RU'];
+      const langs = ['en-US', 'ua-UA', 'ru-RU'];
       const nextLangIndex =
         (langs.findIndex((item) => item === i18next.language) + 1) % langs.length;
       const newLang = langs[nextLangIndex];

@@ -11,6 +11,9 @@
     "format": "prettier --write src/**/*.ts",
     "check-format": "prettier --check src/**/*.ts"
   },
+  "staticFiles": {
+    "staticPath": "public"
+  },
   "keywords": [],
   "author": "mrtoxas@gmail.com",
   "license": "ISC",

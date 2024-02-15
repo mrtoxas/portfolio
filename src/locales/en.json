@@ -8,5 +8,12 @@
     "skills": "Skills",
     "works": "Works",
     "education": "Education"
+  },
+  "education": {
+    "CSTU": "Cherkassy State Technological University",
+    "CSBC": "Cherkasy State Business College",
+    "master": "Master's degree in Computer systems and networks",
+    "bachelor": "Bachelor Computer systems and networks",
+    "junior": "Junior specialist computer engineering Maintenance of computer and intellectual systems and networks"
   }
 }
