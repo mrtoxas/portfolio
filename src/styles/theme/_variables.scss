@@ -1,3 +1,18 @@
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+@mixin mq($rule, $breakpoint) {
+  $breakpoint-value: map-get($breakpoints, $breakpoint);
+  @media (#{$rule}: $breakpoint-value) {
+    @content;
+  }
+}
+
 $theme: (
   text-xs: 0.75rem,
   text-sm: 0.875rem,
@@ -7,12 +22,6 @@ $theme: (
   
   border-radius: 0.1rem,
   container-xl: 1140px,
-  
-  breakpoint-sm: 576px,
-  breakpoint-md: 768px,
-  breakpoint-lg: 992px,
-  breakpoint-xl: 1200px,
-  breakpoint-xxl: 1400px,
 );
 
 :root {
