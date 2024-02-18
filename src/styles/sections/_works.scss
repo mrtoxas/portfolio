@@ -1,0 +1,48 @@
+.works-list {
+	display: grid;
+	gap: 2rem;
+}
+
+.works-list h3 {
+	font-weight: 700;
+	font-size: theme(text-base);
+}
+
+.works-item {
+	display: grid;
+	gap: 0.5rem;
+}
+
+.works-list {
+	display: grid;
+	gap: 1.5rem;
+}
+
+.works-list p,
+.works-list h3 {
+	margin: 0;
+}
+
+.works-descriptions-list {
+	display: grid;
+	gap: 0.3rem;
+}
+
+.works-descriptions-list li {
+	position: relative;
+	padding-left: 1rem;
+	&:before {
+		content: '\25E6';
+		display: inline-block;
+		padding-right: 0.5rem;
+	}
+}
+
+.works-tech-list {
+	display: flex;
+	gap: 0.3em;
+}
+
+.works-tech-list li:not(:last-child):after {
+	content: ',';
+}

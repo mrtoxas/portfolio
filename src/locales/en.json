@@ -11,13 +11,16 @@
   },
   "heading": {
     "skills": "Skills",
-    "works": "Works",
+    "works": "Work Experience",
     "education": "Education",
     "socialActivity": "Social activity"
   },
   "education": {
     "CSTU": "Cherkassy State Technological University",
+    "CSTUExtra": "Advanced: Web programming courses (JavaScript, Ruby on Rails, Python), participation in elective classes provided by the university during the course of study",
     "CSBC": "Cherkasy State Business College",
+    "CEng": "Computer Engineering",
+    "CSBCExtra": "The training program included the study of Assembler and Delphi programming languages",
     "master": "Master's degree in Computer systems and networks",
     "bachelor": "Bachelor Computer systems and networks",
     "junior": "Junior specialist computer engineering Maintenance of computer and intellectual systems and networks"

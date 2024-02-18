@@ -1,6 +1,11 @@
 .header {
-  border-bottom: 1px solid color(border);
   height: 2.5rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  border-bottom: 1px solid color(border);
+  background-color: color(background);
   @media print {
     display: none;
   }
@@ -14,7 +19,7 @@
   height: 100%;
 }
 
-.header-nav{
+.header-nav {
   display: flex;
   align-items: center;
 }
@@ -36,7 +41,7 @@
 .header-actions {
   display: flex;
   gap: 1rem;
-  align-items: center; 
+  align-items: center;
 }
 
 .header-actions > div {

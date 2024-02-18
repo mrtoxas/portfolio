@@ -69,6 +69,7 @@ export function LocaleSelect({ id, onChange, onKeyDown, value }: LocaleSelectPro
 
   const keydownHandler = (event: KeyboardEvent) => {
     if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
       const value = onKeyDown();
       setValue(value);
     }
