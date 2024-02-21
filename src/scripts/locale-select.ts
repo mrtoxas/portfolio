@@ -12,7 +12,7 @@ interface LocaleSelectProps {
   onKeyDown: () => string;
 }
 
-export function LocaleSelect({ id, onChange, onKeyDown, value }: LocaleSelectProps) {
+export function localeSelect({ id, onChange, onKeyDown, value }: LocaleSelectProps) {
   let isOpen = false;
 
   const element = document.getElementById(id);
@@ -29,7 +29,7 @@ export function LocaleSelect({ id, onChange, onKeyDown, value }: LocaleSelectPro
   }
 
   const setValue = (val: string) => {
-    const option = element.querySelector(`[data-value=${val}]`) as HTMLElement;    
+    const option = element.querySelector(`[data-value=${val}]`) as HTMLElement;
     if (!option) {
       console.error(`LocaleSelect: Option element with value ${val} not found`);
       return;
@@ -74,7 +74,7 @@ export function LocaleSelect({ id, onChange, onKeyDown, value }: LocaleSelectPro
       setValue(value);
     }
   };
-  
+
   setValue(value);
 
   window.addEventListener('click', clickHandler);

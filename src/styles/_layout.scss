@@ -1,8 +1,8 @@
 .container {
-	max-width: theme(container-xl);
-	margin-right: auto;
-  margin-left: auto;
+  width: 100%;
+  max-width: theme(container-xl);
   padding-right: 15px;
   padding-left: 15px;
-  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }

@@ -1,25 +1,26 @@
 html {
-	font-size: 100%;
-	line-height: 1.5;
-	font-family: 'Inter', sans-serif;
+  font-family: Inter, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
 }
 
 body {
-	color: color(foreground);
-	background-color: color(background);
-	font-size: theme(text-base);
-	font-weight: 400;
-	@media print {
-		font-size: 90%;
-	}
+  font-size: theme(text-base);
+  font-weight: 400;
+  color: color(foreground);
+  background-color: color(background);
+
+  @media print {
+    font-size: 90%;
+  }
 }
 
 meta[name='theme-color'] {
-	content: var(--color-background);
+  content: var(--color-background);
 }
 
 strong {
-	font-weight: 700;
+  font-weight: 700;
 }
 
 h1,
@@ -28,29 +29,29 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0;
-	font-size: inherit;
-	font-weight: inherit;
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
 }
 
-p{
-	text-wrap: balance
+p {
+  text-wrap: balance;
 }
 
 .icon {
-	display: inline-flex;
-	width: 1.5rem;
-	height: 1.5rem;
+  display: inline-flex;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .list-clear {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 .hidden-in-pint {
-	@media print {
-		display: none;
-	}
+  @media print {
+    display: none;
+  }
 }

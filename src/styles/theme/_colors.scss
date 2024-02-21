@@ -1,26 +1,26 @@
 $themes: (
-  ":root": (
+  ':root': (
     accent: #f4f4f5,
     accent-foreground: #18181b,
-    background: #ffffff,
+    background: #fff,
     foreground: #09090b,
     primary: #18181b,
-    primary-foreground: #ffffff,
+    primary-foreground: #fff,
     secondary: #f4f4f5,
     secondary-foreground: #18181b,
-    border: #e4e4e7
+    border: #e4e4e7,
   ),
-  ".dark": (
+  '.dark': (
     accent: #27272a,
     accent-foreground: #fafafa,
     background: #09090b,
-    foreground: #ffffff,
-    primary: #ffffff,
+    foreground: #fff,
+    primary: #fff,
     primary-foreground: #09090b,
     secondary: #27272a,
-    secondary-foreground: #ffffff,
-    border: #27272a
-  )
+    secondary-foreground: #fff,
+    border: #27272a,
+  ),
 );
 
 @each $selector, $theme in $themes {

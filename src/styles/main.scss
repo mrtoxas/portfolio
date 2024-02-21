@@ -1,17 +1,13 @@
 @import 'theme/normalize';
-@import "theme/colors";
-@import "theme/variables";
-@import "theme/fonts";
-
-@import "base";
-@import "layout";
-
-
-@import "sections/header";
-@import "sections/works";
-
-@import "components/section";
-@import "components/theme-button";
-@import "components/lang-select";
-@import "components/page-loader";
-@import "components/skills";
+@import 'theme/colors';
+@import 'theme/variables';
+@import 'theme/fonts';
+@import 'base';
+@import 'layout';
+@import 'sections/header';
+@import 'sections/works';
+@import 'components/section';
+@import 'components/theme-button';
+@import 'components/lang-select';
+@import 'components/page-loader';
+@import 'components/skills';

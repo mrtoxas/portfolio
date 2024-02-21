@@ -1,48 +1,44 @@
 .works-list {
-	display: grid;
-	gap: 2rem;
+  display: grid;
+  gap: 1.5rem;
 }
 
 .works-list h3 {
-	font-weight: 700;
-	font-size: theme(text-base);
+  font-size: theme(text-base);
+  font-weight: 700;
 }
 
 .works-item {
-	display: grid;
-	gap: 0.5rem;
-}
-
-.works-list {
-	display: grid;
-	gap: 1.5rem;
+  display: grid;
+  gap: 0.5rem;
 }
 
 .works-list p,
 .works-list h3 {
-	margin: 0;
+  margin: 0;
 }
 
 .works-descriptions-list {
-	display: grid;
-	gap: 0.3rem;
+  display: grid;
+  gap: 0.3rem;
 }
 
 .works-descriptions-list li {
-	position: relative;
-	padding-left: 1rem;
-	&:before {
-		content: '\25E6';
-		display: inline-block;
-		padding-right: 0.5rem;
-	}
+  position: relative;
+  padding-left: 1rem;
+
+  &::before {
+    display: inline-block;
+    padding-right: 0.5rem;
+    content: '\25E6';
+  }
 }
 
 .works-tech-list {
-	display: flex;
-	gap: 0.3em;
+  display: flex;
+  gap: 0.3em;
 }
 
-.works-tech-list li:not(:last-child):after {
-	content: ',';
+.works-tech-list li:not(:last-child)::after {
+  content: ',';
 }

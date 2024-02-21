@@ -12,19 +12,13 @@ const setThemeForPage = (theme: Theme) => {
 };
 
 const getSystemTheme = () => {
-  return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-    ? Theme.DARK
-    : Theme.LIGHT;
+  return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? Theme.DARK : Theme.LIGHT;
 };
 
 const toggleTheme = () => {
   const storageTheme = localStorage.getItem(storageThemeKey);
 
-  const theme = storageTheme
-    ? storageTheme === Theme.DARK
-      ? Theme.LIGHT
-      : Theme.DARK
-    : getSystemTheme();
+  const theme = storageTheme ? (storageTheme === Theme.DARK ? Theme.LIGHT : Theme.DARK) : getSystemTheme();
 
   setThemeForPage(theme);
   localStorage.setItem(storageThemeKey, theme);
@@ -43,9 +37,8 @@ export const themeInitialize = () => {
   const storageTheme = localStorage.getItem(storageThemeKey);
 
   const pageTheme =
-    document.documentElement.className
-      .split(' ')
-      .find((item: string) => item === Theme.DARK || item === Theme.LIGHT) || null;
+    document.documentElement.className.split(' ').find((item: string) => item === Theme.DARK || item === Theme.LIGHT) ||
+    null;
 
   if (storageTheme && !pageTheme) {
     setThemeForPage(storageTheme as Theme);
